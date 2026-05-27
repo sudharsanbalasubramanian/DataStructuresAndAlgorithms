@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DataStructuresAndAlgorithms.Graph;
+﻿namespace DataStructuresAndAlgorithms.Graph;
 
 public sealed class NumberOfIsland
 {
