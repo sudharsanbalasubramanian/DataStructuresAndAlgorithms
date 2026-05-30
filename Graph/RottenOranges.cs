@@ -2,8 +2,8 @@
 
 public sealed class RottenOranges
 {
-    private static readonly int[] directionRow = [-1, 0, 1, 0];
-    private static readonly int[] directionCol = [0, 1, 0, -1];
+    private static readonly int[] _directionRow = [-1, 0, 1, 0];
+    private static readonly int[] _directionCol = [0, 1, 0, -1];
 
     /// <summary>
     /// Returns minutes until all fresh oranges rot, or -1 if impossible.
@@ -50,8 +50,8 @@ public sealed class RottenOranges
 
             for (int i = 0; i < 4; i++)
             {
-                int nr = r + directionRow[i];
-                int nc = c + directionCol[i];
+                int nr = r + _directionRow[i];
+                int nc = c + _directionCol[i];
 
                 if (nr < 0 || nr >= grid.Length)
                 {

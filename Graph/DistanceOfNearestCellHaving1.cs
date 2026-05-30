@@ -2,18 +2,18 @@
 
 public static class DistanceOfNearestCellHaving1
 {
-    public static int[][] Nearest(List<List<int>> cells)
+    public static int[][] Nearest(int[][] cells)
     {
         ArgumentNullException.ThrowIfNull(cells);
 
-        int rows = cells.Count;
+        int rows = cells.Length;
         int[][] result = new int[rows][];
         Queue<(int row, int col)> queue = new();
 
         // Initialize result array
         for (int i = 0; i < rows; i++)
         {
-            int cols = cells[i].Count;
+            int cols = cells[i].Length;
             result[i] = new int[cols];
 
             for (int j = 0; j < cols; j++)
@@ -46,7 +46,7 @@ public static class DistanceOfNearestCellHaving1
                 if (nr >= 0 &&
                     nr < rows &&
                     nc >= 0 &&
-                    nc < cells[nr].Count &&
+                    nc < cells[nr].Length &&
                     result[nr][nc] == -1)
                 {
                     result[nr][nc] = result[r][c] + 1;
